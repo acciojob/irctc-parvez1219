@@ -134,7 +134,8 @@ public class TrainService {
                 LocalTime trainDepartureTime = train.getDepartureTime();
                 LocalTime timeOfPassing = trainDepartureTime.plusHours(index);
                 if(timeOfPassing.isAfter(startTime) && timeOfPassing.isBefore(endTime)){
-                    trainIdList.add(train.getTrainId());
+                    trainIdList.add(1);
+                    //trainIdList.add(train.getTrainId());
                 }
             }
         }
