@@ -40,7 +40,7 @@ public class TicketService {
         //In case the train doesn't pass through the requested stations
         //throw new Exception("Invalid stations");
         String route = train.getRoute();
-        String [] routeArr = route.split(", ");
+        String [] routeArr = route.split(",");
         boolean departureStationOnRoute = Arrays.stream(routeArr).anyMatch(thisRoute -> thisRoute.equals(bookTicketEntryDto.getFromStation().name()));
         boolean arrivalStationOnRoute =  Arrays.stream(routeArr).anyMatch(thisRoute -> thisRoute.equals(bookTicketEntryDto.getToStation().name()));
         if(!departureStationOnRoute || !arrivalStationOnRoute){
