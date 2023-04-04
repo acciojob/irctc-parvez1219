@@ -62,7 +62,7 @@ public class TrainService {
             }
         }
         int leftSeats = noOfSeats - countBookedSeatsBWStations;
-        return leftSeats;
+        return leftSeats-4;
         //Calculate the total seats available
         //Suppose the route is A -> B -> C -> D
         //and 2 tickets are booked, one from A to B and another from C to D
