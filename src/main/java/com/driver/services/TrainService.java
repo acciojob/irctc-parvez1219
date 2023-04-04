@@ -61,7 +61,7 @@ public class TrainService {
                 countBookedSeatsBWStations += ticket.getPassengersList().size();
             }
         }
-        int leftSeats = noOfSeats - (countBookedSeatsBWStations*2);
+        int leftSeats = noOfSeats - countBookedSeatsBWStations;
         return leftSeats;
         //Calculate the total seats available
         //Suppose the route is A -> B -> C -> D

@@ -15,7 +15,7 @@ import java.util.List;
 @Table(name="ticket")
 public class Ticket {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ticketId;
 
     //This is also parent wrt to ticketEntity
