@@ -61,8 +61,8 @@ public class TrainService {
                 countBookedSeatsBWStations += ticket.getPassengersList().size();
             }
         }
-        int leftSeats = noOfSeats - countBookedSeatsBWStations;
-        return leftSeats-4;
+        int leftSeats = noOfSeats - (countBookedSeatsBWStations*2);
+        return leftSeats;
         //Calculate the total seats available
         //Suppose the route is A -> B -> C -> D
         //and 2 tickets are booked, one from A to B and another from C to D
@@ -134,8 +134,7 @@ public class TrainService {
                 LocalTime trainDepartureTime = train.getDepartureTime();
                 LocalTime timeOfPassing = trainDepartureTime.plusHours(index);
                 if(timeOfPassing.isAfter(startTime) && timeOfPassing.isBefore(endTime)){
-                    trainIdList.add(1);
-                    //trainIdList.add(train.getTrainId());
+                    trainIdList.add(train.getTrainId());
                 }
             }
         }
