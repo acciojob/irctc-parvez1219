@@ -76,7 +76,7 @@ public class TrainService {
 
         Train train = trainRepository.findById(trainId).get();
         String route = train.getRoute();
-        String[]routeArr = route.split(", ");
+        String[]routeArr = route.split(",");
         if(Arrays.stream(routeArr).noneMatch(thisRoute -> thisRoute.equals(station.name()))){
             throw new Exception("Train is not passing from this station");
         }
