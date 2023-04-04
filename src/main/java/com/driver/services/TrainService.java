@@ -123,7 +123,7 @@ public class TrainService {
         List<Train> trainList = trainRepository.findAll();
         for(Train train : trainList){
             String route = train.getRoute();
-            String[]routeArr = route.split(", ");
+            String[]routeArr = route.split(",");
             if(Arrays.stream(routeArr).anyMatch(thisRoute -> thisRoute.equals(station.name()))){
                 //if we are inside this "if" block it means train is certainly going to pass
                 //from the given station
